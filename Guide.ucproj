@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <ProductVersion>1.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ed41654-4eb5-4d18-8769-6a446eb37601}</ProjectGuid>
+    <OutputType>UserMod</OutputType>
+    <ProjectType>UnrealScript</ProjectType>
+    <RootNamespace>Guide</RootNamespace>
+    <AssemblyName>Guide</AssemblyName>
+    <Name>Guide</Name>
+    <TargetGame>UnrealEngine 3 Licensee</TargetGame>
+    <BaseContentPath>..\..\Engine\Content</BaseContentPath>
+    <GameContentPath>..\..\UDKGame\Content</GameContentPath>
+    <PackageExtensions>.upk;.udk</PackageExtensions>
+    <UccPath>..\..\Binaries\Win64\UDK.exe</UccPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>True</ForceWindowedMode>
+    <WindowWidth>1024</WindowWidth>
+    <WindowHeight>768</WindowHeight>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>False</ForceWindowedMode>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UT3ReferenceSourcePath>C:\UDK\UDK-2013-02\Development\Src</UT3ReferenceSourcePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(UT3ReferenceSourcePath)Core\Classes\*.uc">
+      <Link>Reference\Core\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)Editor\Classes\*.uc">
+      <Link>Reference\Editor\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)Engine\Classes\*.uc">
+      <Link>Reference\Engine\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)ExampleEditor\Classes\*.uc">
+      <Link>Reference\ExampleEditor\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)ExampleGame\Classes\*.uc">
+      <Link>Reference\ExampleGame\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)GameFramework\Classes\*.uc">
+      <Link>Reference\GameFramework\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)IpDrv\Classes\*.uc">
+      <Link>Reference\IpDrv\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)OnlineSubsystemGameSpy\Classes\*.uc">
+      <Link>Reference\OnlineSubsystemGameSpy\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)OnlineSubsystemPC\Classes\*.uc">
+      <Link>Reference\OnlineSubsystemPC\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)UnrealEd\Classes\*.uc">
+      <Link>Reference\UnrealEd\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)UnrealScriptTest\Classes\*.uc">
+      <Link>Reference\UnrealScriptTest\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)UTEditor\Classes\*.uc">
+      <Link>Reference\UTEditor\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)UTGame\Classes\*.uc">
+      <Link>Reference\UTGame\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+    <None Include="$(UT3ReferenceSourcePath)UTGameContent\Classes\*.uc">
+      <Link>Reference\UTGameContent\*.uc</Link>
+      <Visible>true</Visible>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="*\Classes\*.uc" />
+    <Content Include="**\*.uci" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Core\Classes\" />
+    <Folder Include="Engine\" />
+    <Folder Include="Engine\Classes\" />
+    <Folder Include="ExoEditor\" />
+    <Folder Include="ExoEditor\Classes\" />
+    <Folder Include="GameFramework\" />
+    <Folder Include="GameFramework\Classes\" />
+    <Folder Include="GFxUIEditor\" />
+    <Folder Include="GFxUIEditor\Classes\" />
+    <Folder Include="GFxUI\" />
+    <Folder Include="GFxUI\Classes\" />
+    <Folder Include="Guide\Classes" />
+    <Folder Include="IpDrv\" />
+    <Folder Include="IpDrv\Classes\" />
+    <Folder Include="Guide" />
+    <Folder Include="OnlineSubsystemGameCenter\" />
+    <Folder Include="OnlineSubsystemGameCenter\Classes\" />
+    <Folder Include="OnlineSubsystemPC\" />
+    <Folder Include="OnlineSubsystemPC\Classes\" />
+    <Folder Include="OnlineSubsystemSteamworks\" />
+    <Folder Include="OnlineSubsystemSteamworks\Classes\" />
+    <Folder Include="SubstanceAirEd\" />
+    <Folder Include="SubstanceAirEd\Classes\" />
+    <Folder Include="SubstanceAir\" />
+    <Folder Include="SubstanceAir\Classes\" />
+    <Folder Include="SwordEditor\" />
+    <Folder Include="SwordEditor\Classes\" />
+    <Folder Include="UDKBase\" />
+    <Folder Include="UDKBase\classes\" />
+    <Folder Include="UnrealEd\" />
+    <Folder Include="UnrealEd\Classes\" />
+    <Folder Include="UTEditor\" />
+    <Folder Include="UTEditor\Classes\" />
+    <Folder Include="UTGameContent\" />
+    <Folder Include="UTGameContent\Classes\" />
+    <Folder Include="UTGame\" />
+    <Folder Include="UTGame\Classes\" />
+    <Folder Include="WinDrv\" />
+    <Folder Include="WinDrv\Classes\" />
+  </ItemGroup>
+  <Import Condition="'$(MSBuildExtensionsPath32)' != ''" Project="$(MSBuildExtensionsPath32)\PixelMine\UnrealScript.targets" />
+  <Import Condition="'$(MSBuildExtensionsPath32)' == ''" Project="$(MSBuildExtensionsPath)\PixelMine\UnrealScript.targets" />
+</Project>
